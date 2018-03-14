@@ -1,4 +1,4 @@
-package ER.tp3SIR;
+package executionMongo;
 
 import java.net.UnknownHostException;
 import java.util.ArrayList;
@@ -8,6 +8,10 @@ import org.mongodb.morphia.Datastore;
 import org.mongodb.morphia.Morphia;
 
 import com.mongodb.MongoClient;
+
+import classes.Adress;
+import classes.Article;
+import classes.Person;
 
 public class Apptest {
 	public static void main( String[] args ) throws UnknownHostException

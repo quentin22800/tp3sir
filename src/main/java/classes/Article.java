@@ -1,4 +1,4 @@
-package ER.tp3SIR;
+package classes;
 
 import java.util.List;
 
@@ -6,26 +6,30 @@ import org.bson.types.ObjectId;
 import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Id;
 import org.mongodb.morphia.annotations.Reference;
-
 @Entity
-public class Person {
+public class Article {
 	@Id
 	private ObjectId id = new ObjectId();
 	private String name;
+	private int stars;
 	@Reference
-	private List<Adress> adress0;
+	private List<Person> buyers;
 	
-	public Person(){}
+	public Article()
+	{}
 	
-	public Person(ObjectId id, String name, List<Adress> adress0) {
+	public Article(ObjectId id, String name, int stars, List<Person> buyers) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.adress0 = adress0;
+		this.stars = stars;
+		this.buyers = buyers;
 	}
+
 	public ObjectId getId() {
 		return id;
 	}
+	
 	public void setId(ObjectId id) {
 		this.id = id;
 	}
@@ -35,10 +39,16 @@ public class Person {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public List<Adress> getAdress0() {
-		return adress0;
+	public int getStars() {
+		return stars;
 	}
-	public void setAdress0(List<Adress> adress0) {
-		this.adress0 = adress0;
+	public void setStars(int stars) {
+		this.stars = stars;
+	}
+	public List<Person> getBuyers() {
+		return buyers;
+	}
+	public void setBuyers(List<Person> buyers) {
+		this.buyers = buyers;
 	}
 }

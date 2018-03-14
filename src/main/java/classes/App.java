@@ -1,4 +1,4 @@
-package ER.tp3SIR;
+package classes;
 
 /**
  * Hello world!

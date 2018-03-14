@@ -1,4 +1,4 @@
-package ER.tp3SIR;
+package classes;
 
 import org.bson.types.ObjectId;
 import org.mongodb.morphia.annotations.Entity;
